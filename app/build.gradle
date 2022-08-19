@@ -57,4 +57,6 @@ dependencies {
 
     // Firebase Realtime Database
     implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+
+    implementation 'com.google.android.material:material:1.2.0'
 }
