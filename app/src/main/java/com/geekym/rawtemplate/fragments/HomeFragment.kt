@@ -1,26 +1,26 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.geekym.rawtemplate.databinding.FragmentThirdBinding
+import com.geekym.rawtemplate.databinding.FragmentHomeBinding
 
-class ThirdFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    private var _binding: FragmentThirdBinding? = null
+    private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-     override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-         //Your code here
+        //Your code here
 
-         _binding = FragmentThirdBinding.inflate(inflater, container, false)
-         return binding.root
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onDestroyView() {

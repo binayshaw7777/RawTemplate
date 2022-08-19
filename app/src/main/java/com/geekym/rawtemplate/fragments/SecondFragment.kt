@@ -1,4 +1,4 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

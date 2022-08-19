@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.geekym.rawtemplate.HomeFragment"
+        android:name="com.geekym.rawtemplate.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/second"
-        android:name="com.geekym.rawtemplate.SecondFragment"
+        android:name="com.geekym.rawtemplate.fragments.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
     <fragment
         android:id="@+id/third"
-        android:name="com.geekym.rawtemplate.ThirdFragment"
+        android:name="com.geekym.rawtemplate.fragments.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
     <fragment
         android:id="@+id/profile"
-        android:name="com.geekym.rawtemplate.ProfileFragment"
+        android:name="com.geekym.rawtemplate.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
