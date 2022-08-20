@@ -146,7 +146,7 @@
         app:layout_constraintGuide_percent="0.53" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/loginimage"
         android:layout_width="410dp"
         android:layout_height="300dp"
         android:layout_marginTop="4dp"
