@@ -1,4 +1,4 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.Introduction
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.geekym.rawtemplate.R
+import com.geekym.rawtemplate.SignInActivity
 
 class Onboarding : AppCompatActivity() {
 

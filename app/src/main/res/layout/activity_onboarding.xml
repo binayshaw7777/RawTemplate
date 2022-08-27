@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Onboarding">
+    tools:context=".Introduction.Onboarding">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboardingViewPager"
@@ -47,7 +47,7 @@
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
-        android:background="@drawable/next_button"
+        android:background="@drawable/ripple_blue"
         android:contentDescription="@string/app_name"
         android:layout_marginBottom="100dp"
         android:text=">"

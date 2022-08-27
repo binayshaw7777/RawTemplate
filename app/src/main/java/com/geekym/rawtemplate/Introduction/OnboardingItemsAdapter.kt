@@ -1,4 +1,4 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.Introduction
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.geekym.rawtemplate.R
 
 class OnboardingItemsAdapter(private val onboardingItems: List<OnboardingItem>) :
 RecyclerView.Adapter<OnboardingItemsAdapter.OnboardingItemViewHolder>(){

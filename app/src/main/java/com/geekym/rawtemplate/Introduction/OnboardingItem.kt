@@ -1,4 +1,4 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.Introduction
 
 data class OnboardingItem(
     val onboardingImage: Int,

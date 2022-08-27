@@ -16,7 +16,7 @@
         android:theme="@style/Theme.RawTemplate"
         tools:targetApi="31">
         <activity
-            android:name=".Onboarding"
+            android:name=".Introduction.Splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,15 +25,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Introduction.Onboarding"
+            android:exported="true" />
+        <activity
             android:name=".SignUpActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignInActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
