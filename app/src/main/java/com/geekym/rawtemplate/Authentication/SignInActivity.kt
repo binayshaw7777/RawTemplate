@@ -3,7 +3,6 @@ package com.geekym.rawtemplate.Authentication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Toast
 import com.geekym.rawtemplate.MainActivity
 import com.geekym.rawtemplate.databinding.ActivitySignInBinding
@@ -31,21 +30,27 @@ class SignInActivity : AppCompatActivity() {
             val email = binding.loginemail.text.toString()
             val password = binding.loginpassword.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                if (password.length > 8) {
+            if (email.isNotEmpty() && password.isNotEmpty()){
 
-                    firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            val intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                        }
+                firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
-            } else {
-                Toast.makeText(this, "Please enter the details!", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,"Please enter the details!", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (firebaseAuth.currentUser!=null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
