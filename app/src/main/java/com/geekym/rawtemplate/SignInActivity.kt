@@ -17,7 +17,14 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.signuptext.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+        }
+
         binding.loginemail.setOnClickListener {
             val email = binding.loginemail.text.toString()
             val password = binding.loginpassword.text.toString()
