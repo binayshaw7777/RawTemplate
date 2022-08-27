@@ -30,18 +30,4 @@ class Splashscreen : AppCompatActivity() {
         } , 2500) // here we're delaying to startActivity after 2 seconds
 
     }
-
-    override fun onStart() {
-        super.onStart()
-        if (firebaseAuth.currentUser != null) {
-            handler = Handler()
-            handler.postDelayed({
-
-                // Delay and Start Activity
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            } , 2500) // here we're delaying to startActivity after 2 seconds
-        }
-    }
 }
