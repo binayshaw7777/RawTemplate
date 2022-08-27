@@ -1,4 +1,4 @@
-package com.geekym.rawtemplate
+package com.geekym.rawtemplate.Authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +23,7 @@ class SignUpActivity : AppCompatActivity() {
 
         // For Sign In text
         binding.gotosignin.setOnClickListener {
-            val intent = Intent(this,SignInActivity::class.java)
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
         // For Sign Up button
@@ -38,7 +38,7 @@ class SignUpActivity : AppCompatActivity() {
 
                     firebaseAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
                         if (it.isSuccessful){
-                            val intent = Intent(this,SignInActivity::class.java)
+                            val intent = Intent(this, SignInActivity::class.java)
                             startActivity(intent)
                         }else{
                             Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()

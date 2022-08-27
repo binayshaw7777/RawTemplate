@@ -28,10 +28,10 @@
             android:name=".Introduction.Onboarding"
             android:exported="true" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Authentication.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".Authentication.SignInActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

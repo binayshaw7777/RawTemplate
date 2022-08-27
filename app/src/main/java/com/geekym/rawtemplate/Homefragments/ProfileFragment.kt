@@ -1,15 +1,15 @@
-package com.geekym.rawtemplate.fragments
+package com.geekym.rawtemplate.Homefragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.geekym.rawtemplate.databinding.FragmentSecondBinding
+import com.geekym.rawtemplate.databinding.FragmentProfileBinding
 
-class SecondFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class SecondFragment : Fragment() {
 
         //Your code here
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 

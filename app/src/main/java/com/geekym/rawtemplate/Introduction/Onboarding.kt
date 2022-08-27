@@ -1,18 +1,19 @@
 package com.geekym.rawtemplate.Introduction
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.geekym.rawtemplate.Authentication.SignInActivity
 import com.geekym.rawtemplate.R
-import com.geekym.rawtemplate.SignInActivity
+
 
 class Onboarding : AppCompatActivity() {
 
@@ -21,6 +22,13 @@ class Onboarding : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // when this activity is about to be launch we need to check if its opened before or not
+        // when this activity is about to be launch we need to check if its opened before or not
+        if (restorePrefData()) {
+            navigateToSignInActivity()
+        }
+
         setContentView(R.layout.activity_onboarding)
 
         supportActionBar?.hide()
@@ -29,6 +37,18 @@ class Onboarding : AppCompatActivity() {
         setupIndicators()
         setCurrentIndicator(0)
 
+    }
+
+    private fun restorePrefData(): Boolean {
+        val pref = applicationContext.getSharedPreferences("myPrefs", MODE_PRIVATE)
+        return pref.getBoolean("isIntroOpened", false)
+    }
+
+    private fun savePrefsData() {
+        val pref = applicationContext.getSharedPreferences("myPrefs", MODE_PRIVATE)
+        val editor = pref.edit()
+        editor.putBoolean("isIntroOpened", true)
+        editor.apply()
     }
 
     private fun setOnboardingItems() {
@@ -68,17 +88,24 @@ class Onboarding : AppCompatActivity() {
             if (onboardingViewPager.currentItem + 1 < onboardingItemsAdapter.itemCount) {
                 onboardingViewPager.currentItem += 1
             } else {
-                navigateToHomeActivity()
+                //open main activity
+
+                //open main activity
+                savePrefsData()
+                // also we need to save a boolean value to storage so next time when the user run the app
+                // we could know that he is already checked the intro screen activity
+                // i'm going to use shared preferences to that process
+                navigateToSignInActivity()
             }
         }
 
         findViewById<TextView>(R.id.textSkip).setOnClickListener {
-            navigateToHomeActivity()
+            navigateToSignInActivity()
         }
 
     }
 
-    private fun navigateToHomeActivity() {
+    private fun navigateToSignInActivity() {
         startActivity(Intent(applicationContext, SignInActivity::class.java))
         finish()
     }
