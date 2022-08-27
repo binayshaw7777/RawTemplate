@@ -43,27 +43,19 @@ class SignUpActivity : AppCompatActivity() {
             //Create user object
             val user = User(name, email)
 
-            if (name.isNotEmpty() && email.isNotEmpty() && pass.isNotEmpty() && confirmpass.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(
-                    email
-                ).matches()
-            ) {
+            if (name.isNotEmpty() && email.isNotEmpty() && pass.isNotEmpty() && confirmpass.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 if (pass == confirmpass && pass.length > 8) {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                         if (it.isSuccessful) {
                             //get the generated uid
-                            val uid = firebaseAuth.currentUser?.uid
+                            val u = firebaseAuth.currentUser
 
                             //add user data in the Realtime Database
-                            db.child(uid!!).setValue(user).addOnCompleteListener { it1 ->
+                            db.child(u?.uid!!).setValue(user).addOnCompleteListener { it1 ->
                                 if (it1.isSuccessful) {
-                                    val u = firebaseAuth.currentUser
-                                    u?.sendEmailVerification()
-                                    Toast.makeText(
-                                        this,
-                                        "Email Verification sent to your mail",
-                                        Toast.LENGTH_LONG
-                                    ).show()
+                                    u.sendEmailVerification()
+                                    Toast.makeText(this, "Email Verification sent to your mail", Toast.LENGTH_LONG).show()
                                     startActivity(Intent(this, SignInActivity::class.java))
                                 }
                             }
