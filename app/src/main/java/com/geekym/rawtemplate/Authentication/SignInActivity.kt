@@ -34,8 +34,13 @@ class SignInActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
                     if (it.isSuccessful){
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
+                        if (firebaseAuth.currentUser?.isEmailVerified!!) {
+                            startActivity(Intent(this, MainActivity::class.java))
+                        } else {
+                            val u = firebaseAuth.currentUser
+                            u?.sendEmailVerification()
+                            Toast.makeText(this, "Email Verification sent to your mail", Toast.LENGTH_LONG).show()
+                        }
                     }else{
                         Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
