@@ -82,7 +82,7 @@
         android:layout_marginEnd="4dp"
         android:gravity="center"
         android:text="Forgot Password?"
-        android:textColor="@color/red"
+        android:textColor="@color/blue"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,9 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingStart="15dp"
-            android:layout_marginTop="0dp"
             android:layout_marginEnd="18dp"
-            android:layout_marginBottom="0dp"
             android:gravity="center"
             android:text="Register"
             android:textColor="#008AFF"
@@ -133,7 +131,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@drawable/ripple_blue"
+        android:background="@drawable/primary_button"
         android:text="Sign in"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -162,7 +160,7 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/demo" />
+        app:srcCompat="@drawable/sign_in_illustration" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

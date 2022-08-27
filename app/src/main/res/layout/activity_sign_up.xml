@@ -11,14 +11,14 @@
 
     <ImageView
         android:id="@+id/signupimage"
-        android:layout_width="match_parent"
-        android:layout_height="239dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="374dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sign_up" />
+        app:srcCompat="@drawable/sign_up_illustration" />
 
     <TextView
         android:id="@+id/toptext"
@@ -144,7 +144,7 @@
         android:id="@+id/signupbtn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@drawable/ripple_blue"
+        android:background="@drawable/primary_button"
         android:text="Sign up"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -172,22 +172,17 @@
             android:layout_width="175dp"
             android:layout_height="match_parent"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
             android:gravity="center"
             android:text="Don't have an account?"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/gotosignin"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="0dp"
             android:gravity="center"
-            android:paddingStart="15dp"
             android:text="Login"
+            android:paddingLeft="15dp"
             android:textColor="#008AFF"
             android:textStyle="bold" />
 

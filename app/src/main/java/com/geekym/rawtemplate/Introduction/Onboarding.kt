@@ -55,17 +55,17 @@ class Onboarding : AppCompatActivity() {
         onboardingItemsAdapter = OnboardingItemsAdapter(
             listOf(
                 OnboardingItem(
-                    onboardingImage = R.drawable.task,
+                    onboardingImage = R.drawable.welcome_illustration,
                     title = "This is the first screen",
                     description = "This is the subtitle for your first screen"
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.time,
+                    onboardingImage = R.drawable.onboarding_screen_2,
                     title = "This is the second screen",
                     description = "This is the subtitle for your second screen"
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.reminder,
+                    onboardingImage = R.drawable.onboarding_screen_3,
                     title = "This is the third screen",
                     description = "This is the subtitle for your third screen"
                 )
