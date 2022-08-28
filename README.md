@@ -8,12 +8,6 @@ The UI/UX is really simple and clean, we tried to add as many important componen
 This is an Open Source project, so changes are always welcome. Feel free to contribute, ask your doubts, improve this project and save development time.
 
 
-## 📕 Authors
-1. [Binay Shaw](https://github.com/binayshaw7777)
-2. [Aritra Das](https://github.com/aritra-tech)
-
-## Contributors
-<br>
 
 
 ## 💻 Tech Stack used 
@@ -81,6 +75,10 @@ you'll get your name updated in the Readme file :D
   - You just focus on the logic and your app, the rest of the work if already done :)
   - The app is not perfect, to make that we made it Open Source.
   - Any improvements or changes are always welcome :D
+
+## 📕 Authors
+<a href="https://github.com/binayshaw7777/RawTemplate/graphs/contributors">
+ <img src="https://contrib.rocks/image?repo=binayshaw7777/RawTemplate" />
 
 ## 📝 License
 
