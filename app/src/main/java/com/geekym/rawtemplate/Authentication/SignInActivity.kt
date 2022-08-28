@@ -23,6 +23,10 @@ class SignInActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.frgtpass.setOnClickListener {
+            startActivity(Intent(this, ForgotPassword::class.java))
+        }
+
         binding.signuptext.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
