@@ -29,13 +29,6 @@ This is an Open Source project, so changes are always welcome. Feel free to cont
 - **Home Activity** - Consists of 4 Fragments which can be switched using bottom navigation bar.
 <br/>
 
-## 📱Screenshots
-||||
-|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![Imgur](Screenshots/ss1.png) | ![Imgur](Screenshots/ss0.png) |
-| ![Imgur](Screenshots/ss2.png) | ![Imgur](Screenshots/ss3.png) |
-
-
 ## 🍴 Contribution Guide
 - Clone the repository by the following link and open the project in Android Studio or Git Bash
 - ```bash
