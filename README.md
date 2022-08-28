@@ -32,8 +32,8 @@ This is an Open Source project, so changes are always welcome. Feel free to cont
 ## 📱Screenshots
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![Imgur](Screenshots/1st.png) | ![Imgur](Screenshots/2nd.png) | ![Imgur](Screenshots/3rd.png) |
-| ![Imgur](Screenshots/4th.png) | ![Imgur](Screenshots/5th.png) | ![Imgur](Screenshots/6th.png) |
+| ![Imgur](Screenshots/ss1.png) | ![Imgur](Screenshots/ss0.png) |
+| ![Imgur](Screenshots/ss2.png) | ![Imgur](Screenshots/ss3.png) |
 
 
 ## 🍴 Contribution Guide
